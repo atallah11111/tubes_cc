@@ -1,10 +1,20 @@
-pipeline{
-	agent any
-	stages {
-		stage("hello"){
-			steps{
-				echo "my jenkins pipeline"
-			}
-		}
-	}
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+            }
+        }
+    }
 }
